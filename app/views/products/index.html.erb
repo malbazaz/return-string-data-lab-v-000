@@ -7,6 +7,7 @@
       var id = $(this).data("id");
       $.get("/products/" + id + "/description", function(description) {
       $.get("/products/" + id + "/inventory", function(inventory) {
+        inventoryText = ""
         if(inventory>0){
           "<p>Available</p>"
         } else {
@@ -18,7 +19,7 @@
           inventoryText = "<strong>Sold Out</strong>";
         }
         var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
-        $("#product-" + id).html(descriptionText);
+        $("#product-" + id).html(description);
       });
     });
     });
