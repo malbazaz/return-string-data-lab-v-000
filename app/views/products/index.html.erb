@@ -9,9 +9,9 @@
       $.get("/products/" + id + "/inventory", function(inventory) {
         var inventoryText = ""
         if(inventory===true){
-        inventoryText = "<p>Available</p>"
+        inventoryText = "Available"
       } else if(inventory===false) {
-        inventoryText = "<p> Sold Out</p>"
+        inventoryText = "Sold Out"
         }
         var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
         $("#product-" + id).html(description);
