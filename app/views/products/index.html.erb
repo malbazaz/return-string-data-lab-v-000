@@ -8,7 +8,7 @@
       $.get("/products/" + id + "/description", function(description) {
       $.get("/products/" + id + "/inventory", function(inventory) {
         let inventoryText = ""
-        if(inventory>0){
+        if(inventory===true){
         inventoryText = "<p>Available</p>"
         } else {
         inventoryText = "<p>false : Sold Out</p>"
