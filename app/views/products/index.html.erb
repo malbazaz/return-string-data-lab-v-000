@@ -7,9 +7,9 @@
       var id = $(this).data("id");
       $.get("/products/" + id + "/description", function(description) {
       $.get("/products/" + id + "/inventory", function(inventory) {
-        inventoryText = ""
+        let inventoryText = ""
         if(inventory>0){
-          "<p>Available</p>"
+        inventoryText = "<p>Available</p>"
         } else {
           "<p>Sold Out</p>"
           return "false"
