@@ -5,7 +5,7 @@
   $(function () {
     $(".js-more").on('click', function() {
       var id = $(this).data("id");
-      $.get("/products/" + id + "/body", function(data) {
+      $.get("/products/" + id + "/index", function(data) {
         // Replace text of body-id div
         $("#body-" + id).text(data);
         if(product.inventory>0){
