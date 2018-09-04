@@ -12,11 +12,6 @@
         inventoryText = "<p>Available</p>"
         } else {
         inventoryText = "<p>false : Sold Out</p>"
-        "false"
-        }
-        var inventoryText = "<strong>Available</strong>";
-        if(inventory === "false"){
-          inventoryText = "<strong>Sold Out</strong>";
         }
         var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
         $("#product-" + id).html(description);
