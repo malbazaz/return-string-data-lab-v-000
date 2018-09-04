@@ -8,7 +8,11 @@
       $.get("/products/" + id + "/body", function(data) {
         // Replace text of body-id div
         $("#body-" + id).text(data);
-        
+        if(product.inventory>0){
+          return "true"
+        } else {
+          return "false"
+        }
       });
     });
 })
