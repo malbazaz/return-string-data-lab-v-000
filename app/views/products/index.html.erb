@@ -10,7 +10,7 @@
         var inventoryText = ""
         if(inventory===true){
         inventoryText = "<p>Available</p>"
-        } else {
+      } else if(inventory===false) {
         inventoryText = "<p>Sold Out</p>"
         }
         var descriptionText = "<p>" + description + "</p><p>" + inventoryText + "</p>";
